@@ -13,7 +13,10 @@
 		199EBF312548EBE4001E0823 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199EBF302548EBE4001E0823 /* Preview Assets.xcassets */; };
 		199EBF3C2548EBE5001E0823 /* Study_VideoCreaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EBF3B2548EBE5001E0823 /* Study_VideoCreaterTests.swift */; };
 		199EBF472548EBE5001E0823 /* Study_VideoCreaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EBF462548EBE5001E0823 /* Study_VideoCreaterUITests.swift */; };
-		199EBF5A2548F7C0001E0823 /* CreateVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EBF592548F7C0001E0823 /* CreateVideoView.swift */; };
+		199EBF5A2548F7C0001E0823 /* CreateSimpleVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EBF592548F7C0001E0823 /* CreateSimpleVideoView.swift */; };
+		19DFD671254AF98A00CABCB2 /* fuga.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 19DFD670254AF98A00CABCB2 /* fuga.MOV */; };
+		19DFD677254AFC4100CABCB2 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFD676254AFC4100CABCB2 /* VideoPlayerView.swift */; };
+		19DFD686254B113A00CABCB2 /* VideoCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFD685254B113A00CABCB2 /* VideoCreator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +49,10 @@
 		199EBF422548EBE5001E0823 /* Study-VideoCreaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Study-VideoCreaterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		199EBF462548EBE5001E0823 /* Study_VideoCreaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_VideoCreaterUITests.swift; sourceTree = "<group>"; };
 		199EBF482548EBE5001E0823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		199EBF592548F7C0001E0823 /* CreateVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVideoView.swift; sourceTree = "<group>"; };
+		199EBF592548F7C0001E0823 /* CreateSimpleVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSimpleVideoView.swift; sourceTree = "<group>"; };
+		19DFD670254AF98A00CABCB2 /* fuga.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = fuga.MOV; sourceTree = "<group>"; };
+		19DFD676254AFC4100CABCB2 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		19DFD685254B113A00CABCB2 /* VideoCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCreator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,10 @@
 		199EBF282548EBE2001E0823 /* Study-VideoCreater */ = {
 			isa = PBXGroup;
 			children = (
+				19DFD684254B10B900CABCB2 /* Helper */,
 				199EBF582548F7A9001E0823 /* View */,
 				199EBF292548EBE2001E0823 /* Study_VideoCreaterApp.swift */,
+				19DFD670254AF98A00CABCB2 /* fuga.MOV */,
 				199EBF2D2548EBE4001E0823 /* Assets.xcassets */,
 				199EBF322548EBE4001E0823 /* Info.plist */,
 				199EBF2F2548EBE4001E0823 /* Preview Content */,
@@ -135,7 +143,7 @@
 		199EBF572548F79D001E0823 /* CreateVideo */ = {
 			isa = PBXGroup;
 			children = (
-				199EBF592548F7C0001E0823 /* CreateVideoView.swift */,
+				199EBF592548F7C0001E0823 /* CreateSimpleVideoView.swift */,
 			);
 			path = CreateVideo;
 			sourceTree = "<group>";
@@ -143,10 +151,27 @@
 		199EBF582548F7A9001E0823 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				199EBF2B2548EBE2001E0823 /* ContentView.swift */,
 				199EBF572548F79D001E0823 /* CreateVideo */,
+				19DFD675254AFC1F00CABCB2 /* VideoPlayer */,
+				199EBF2B2548EBE2001E0823 /* ContentView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		19DFD675254AFC1F00CABCB2 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				19DFD676254AFC4100CABCB2 /* VideoPlayerView.swift */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		19DFD684254B10B900CABCB2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				19DFD685254B113A00CABCB2 /* VideoCreator.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +279,7 @@
 			files = (
 				199EBF312548EBE4001E0823 /* Preview Assets.xcassets in Resources */,
 				199EBF2E2548EBE4001E0823 /* Assets.xcassets in Resources */,
+				19DFD671254AF98A00CABCB2 /* fuga.MOV in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,9 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				199EBF5A2548F7C0001E0823 /* CreateVideoView.swift in Sources */,
+				19DFD686254B113A00CABCB2 /* VideoCreator.swift in Sources */,
+				199EBF5A2548F7C0001E0823 /* CreateSimpleVideoView.swift in Sources */,
 				199EBF2C2548EBE2001E0823 /* ContentView.swift in Sources */,
 				199EBF2A2548EBE2001E0823 /* Study_VideoCreaterApp.swift in Sources */,
+				19DFD677254AFC4100CABCB2 /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
