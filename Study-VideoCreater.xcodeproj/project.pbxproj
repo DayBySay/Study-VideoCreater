@@ -145,8 +145,8 @@
 		199EBF572548F79D001E0823 /* CreateVideo */ = {
 			isa = PBXGroup;
 			children = (
-				199EBF592548F7C0001E0823 /* CreateVideoFromImageView.swift */,
 				19DFD698254B12CF00CABCB2 /* CreateSimpleVideoView.swift */,
+				199EBF592548F7C0001E0823 /* CreateVideoFromImageView.swift */,
 			);
 			path = CreateVideo;
 			sourceTree = "<group>";
