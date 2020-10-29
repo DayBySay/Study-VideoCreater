@@ -2,16 +2,16 @@
 //  CreateSimpleVideoView.swift
 //  Study-VideoCreater
 //
-//  Created by Takayuki Sei on 2020/10/28.
+//  Created by Takayuki Sei on 2020/10/30.
 //
 
 import SwiftUI
 
 struct CreateSimpleVideoView: View {
-    @StateObject var viewModel = CreateVideoViewModel()
+    @StateObject var viewModel = CreateSimpleVideoViewModel()
     
     var body: some View {
-        Button("Create Video") {
+        Button("Create Simple Video") {
             viewModel.createVideo()
         }
         VideoPlayerView(videoURL: viewModel.url)
@@ -19,20 +19,17 @@ struct CreateSimpleVideoView: View {
     }
 }
 
-import AVFoundation
-
-class CreateVideoViewModel: ObservableObject {
-    @Published var url: URL? = nil
+class CreateSimpleVideoViewModel: ObservableObject {
+    @Published var url: URL?
     
     private let videoCreator = VideoCreator()
     
     func createVideo() {
-        url = videoCreator.createVideoFromImage()
+        url = videoCreator.createSimpleVideo()
     }
-
 }
 
-struct CreateVideoView_Previews: PreviewProvider {
+struct CreateSimpleVideoView_Previews: PreviewProvider {
     static var previews: some View {
         CreateSimpleVideoView()
     }

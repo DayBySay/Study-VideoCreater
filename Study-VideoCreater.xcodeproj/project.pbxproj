@@ -13,10 +13,11 @@
 		199EBF312548EBE4001E0823 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199EBF302548EBE4001E0823 /* Preview Assets.xcassets */; };
 		199EBF3C2548EBE5001E0823 /* Study_VideoCreaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EBF3B2548EBE5001E0823 /* Study_VideoCreaterTests.swift */; };
 		199EBF472548EBE5001E0823 /* Study_VideoCreaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EBF462548EBE5001E0823 /* Study_VideoCreaterUITests.swift */; };
-		199EBF5A2548F7C0001E0823 /* CreateSimpleVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EBF592548F7C0001E0823 /* CreateSimpleVideoView.swift */; };
+		199EBF5A2548F7C0001E0823 /* CreateVideoFromImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EBF592548F7C0001E0823 /* CreateVideoFromImageView.swift */; };
 		19DFD671254AF98A00CABCB2 /* fuga.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 19DFD670254AF98A00CABCB2 /* fuga.MOV */; };
 		19DFD677254AFC4100CABCB2 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFD676254AFC4100CABCB2 /* VideoPlayerView.swift */; };
 		19DFD686254B113A00CABCB2 /* VideoCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFD685254B113A00CABCB2 /* VideoCreator.swift */; };
+		19DFD699254B12CF00CABCB2 /* CreateSimpleVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFD698254B12CF00CABCB2 /* CreateSimpleVideoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +50,11 @@
 		199EBF422548EBE5001E0823 /* Study-VideoCreaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Study-VideoCreaterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		199EBF462548EBE5001E0823 /* Study_VideoCreaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_VideoCreaterUITests.swift; sourceTree = "<group>"; };
 		199EBF482548EBE5001E0823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		199EBF592548F7C0001E0823 /* CreateSimpleVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSimpleVideoView.swift; sourceTree = "<group>"; };
+		199EBF592548F7C0001E0823 /* CreateVideoFromImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVideoFromImageView.swift; sourceTree = "<group>"; };
 		19DFD670254AF98A00CABCB2 /* fuga.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = fuga.MOV; sourceTree = "<group>"; };
 		19DFD676254AFC4100CABCB2 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		19DFD685254B113A00CABCB2 /* VideoCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCreator.swift; sourceTree = "<group>"; };
+		19DFD698254B12CF00CABCB2 /* CreateSimpleVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSimpleVideoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +145,8 @@
 		199EBF572548F79D001E0823 /* CreateVideo */ = {
 			isa = PBXGroup;
 			children = (
-				199EBF592548F7C0001E0823 /* CreateSimpleVideoView.swift */,
+				199EBF592548F7C0001E0823 /* CreateVideoFromImageView.swift */,
+				19DFD698254B12CF00CABCB2 /* CreateSimpleVideoView.swift */,
 			);
 			path = CreateVideo;
 			sourceTree = "<group>";
@@ -305,7 +308,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				19DFD686254B113A00CABCB2 /* VideoCreator.swift in Sources */,
-				199EBF5A2548F7C0001E0823 /* CreateSimpleVideoView.swift in Sources */,
+				199EBF5A2548F7C0001E0823 /* CreateVideoFromImageView.swift in Sources */,
+				19DFD699254B12CF00CABCB2 /* CreateSimpleVideoView.swift in Sources */,
 				199EBF2C2548EBE2001E0823 /* ContentView.swift in Sources */,
 				199EBF2A2548EBE2001E0823 /* Study_VideoCreaterApp.swift in Sources */,
 				19DFD677254AFC4100CABCB2 /* VideoPlayerView.swift in Sources */,

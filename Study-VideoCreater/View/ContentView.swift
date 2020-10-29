@@ -19,7 +19,8 @@ struct ListView: View {
     var body: some View {
         Form {
             Section(header: Text("Create Media")) {
-                NavigationLink("CreateSimpleVideo", destination: CreateSimpleVideoView())
+                NavigationLink("Create Simple Video", destination: CreateSimpleVideoView())
+                NavigationLink("Create Video From Image", destination: CreateVideoFromImageView())
             }
         }
     }
