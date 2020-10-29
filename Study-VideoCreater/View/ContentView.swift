@@ -7,10 +7,16 @@
 
 import SwiftUI
 
-let items = [
-    DetailViewItem(name: "hoge"),
-    DetailViewItem(name: "fuga"),
-    DetailViewItem(name: "nyossu"),
+struct DestinatioItem: Identifiable {
+    var id: String { name }
+    let name: String
+    let view: AnyView
+}
+
+let destinationItems: [DestinatioItem] = [
+    DestinatioItem(name: "hoge", view: AnyView(DetailView(item: DetailViewItem(name: "hoge")))),
+    DestinatioItem(name: "fuga", view: AnyView(DetailView(item: DetailViewItem(name: "fuga")))),
+    DestinatioItem(name: "nyassu", view: AnyView(DetailView(item: DetailViewItem(name: "nyaosu")))),
 ]
 
 struct ContentView: View {
@@ -23,9 +29,9 @@ struct ContentView: View {
 
 struct ListView: View {
     var body: some View {
-        List(items) { item in
+        List(destinationItems) { item in
             NavigationLink(
-                destination: DetailView(item: item),
+                destination: item.view,
                 label: {
                     Text(item.name)
                 })
