@@ -14,10 +14,11 @@
 		199EBF3C2548EBE5001E0823 /* Study_VideoCreaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EBF3B2548EBE5001E0823 /* Study_VideoCreaterTests.swift */; };
 		199EBF472548EBE5001E0823 /* Study_VideoCreaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EBF462548EBE5001E0823 /* Study_VideoCreaterUITests.swift */; };
 		199EBF5A2548F7C0001E0823 /* CreateVideoFromImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EBF592548F7C0001E0823 /* CreateVideoFromImageView.swift */; };
-		19DFD671254AF98A00CABCB2 /* fuga.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 19DFD670254AF98A00CABCB2 /* fuga.MOV */; };
 		19DFD677254AFC4100CABCB2 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFD676254AFC4100CABCB2 /* VideoPlayerView.swift */; };
 		19DFD686254B113A00CABCB2 /* VideoCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFD685254B113A00CABCB2 /* VideoCreator.swift */; };
 		19DFD699254B12CF00CABCB2 /* CreateSimpleVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFD698254B12CF00CABCB2 /* CreateSimpleVideoView.swift */; };
+		19DFD69E254B1D1900CABCB2 /* CreateSimpleVideoWithAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DFD69D254B1D1900CABCB2 /* CreateSimpleVideoWithAudioView.swift */; };
+		19DFD6AB254B20BF00CABCB2 /* engawa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 19DFD6AA254B20BF00CABCB2 /* engawa.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +52,11 @@
 		199EBF462548EBE5001E0823 /* Study_VideoCreaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_VideoCreaterUITests.swift; sourceTree = "<group>"; };
 		199EBF482548EBE5001E0823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		199EBF592548F7C0001E0823 /* CreateVideoFromImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVideoFromImageView.swift; sourceTree = "<group>"; };
-		19DFD670254AF98A00CABCB2 /* fuga.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = fuga.MOV; sourceTree = "<group>"; };
 		19DFD676254AFC4100CABCB2 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		19DFD685254B113A00CABCB2 /* VideoCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCreator.swift; sourceTree = "<group>"; };
 		19DFD698254B12CF00CABCB2 /* CreateSimpleVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSimpleVideoView.swift; sourceTree = "<group>"; };
+		19DFD69D254B1D1900CABCB2 /* CreateSimpleVideoWithAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSimpleVideoWithAudioView.swift; sourceTree = "<group>"; };
+		19DFD6AA254B20BF00CABCB2 /* engawa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = engawa.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +107,10 @@
 		199EBF282548EBE2001E0823 /* Study-VideoCreater */ = {
 			isa = PBXGroup;
 			children = (
+				19DFD6A9254B1DEF00CABCB2 /* Resources */,
 				19DFD684254B10B900CABCB2 /* Helper */,
 				199EBF582548F7A9001E0823 /* View */,
 				199EBF292548EBE2001E0823 /* Study_VideoCreaterApp.swift */,
-				19DFD670254AF98A00CABCB2 /* fuga.MOV */,
 				199EBF2D2548EBE4001E0823 /* Assets.xcassets */,
 				199EBF322548EBE4001E0823 /* Info.plist */,
 				199EBF2F2548EBE4001E0823 /* Preview Content */,
@@ -147,6 +149,7 @@
 			children = (
 				19DFD698254B12CF00CABCB2 /* CreateSimpleVideoView.swift */,
 				199EBF592548F7C0001E0823 /* CreateVideoFromImageView.swift */,
+				19DFD69D254B1D1900CABCB2 /* CreateSimpleVideoWithAudioView.swift */,
 			);
 			path = CreateVideo;
 			sourceTree = "<group>";
@@ -175,6 +178,14 @@
 				19DFD685254B113A00CABCB2 /* VideoCreator.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		19DFD6A9254B1DEF00CABCB2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				19DFD6AA254B20BF00CABCB2 /* engawa.mp3 */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +293,7 @@
 			files = (
 				199EBF312548EBE4001E0823 /* Preview Assets.xcassets in Resources */,
 				199EBF2E2548EBE4001E0823 /* Assets.xcassets in Resources */,
-				19DFD671254AF98A00CABCB2 /* fuga.MOV in Resources */,
+				19DFD6AB254B20BF00CABCB2 /* engawa.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +322,7 @@
 				199EBF5A2548F7C0001E0823 /* CreateVideoFromImageView.swift in Sources */,
 				19DFD699254B12CF00CABCB2 /* CreateSimpleVideoView.swift in Sources */,
 				199EBF2C2548EBE2001E0823 /* ContentView.swift in Sources */,
+				19DFD69E254B1D1900CABCB2 /* CreateSimpleVideoWithAudioView.swift in Sources */,
 				199EBF2A2548EBE2001E0823 /* Study_VideoCreaterApp.swift in Sources */,
 				19DFD677254AFC4100CABCB2 /* VideoPlayerView.swift in Sources */,
 			);

@@ -37,12 +37,29 @@ struct VideoCreator {
             return nil
         }
         
+        let asset = AVAsset(url: Bundle.main.url(forResource: "engawa", withExtension: "mp3")!)
+        let reader = try! AVAssetReader(asset: asset)
+        let audioOutputSettings: [String: Any] = [
+            AVFormatIDKey: Int(kAudioFormatLinearPCM),
+            AVLinearPCMBitDepthKey: 16,
+            AVLinearPCMIsFloatKey: false,
+            AVSampleRateKey: 48000,
+            AVNumberOfChannelsKey: 1,
+            AVLinearPCMIsBigEndianKey: false,
+            AVLinearPCMIsNonInterleaved: false,
+        ]
+        let trackOutput = AVAssetReaderTrackOutput(track: asset.tracks[0],
+                                                   outputSettings: audioOutputSettings)
+        reader.add(trackOutput)
+        let audioInput = AVAssetWriterInput(mediaType: .audio, outputSettings: audioOutputSettings)
+        writer.add(audioInput)
+
         // VideoTrack追加用のInputを作成しWriterに追加
-        let input = AVAssetWriterInput(mediaType: .video, outputSettings: configuration.outputSettings)
-        writer.add(input)
+        let videoInput = AVAssetWriterInput(mediaType: .video, outputSettings: configuration.outputSettings)
+        writer.add(videoInput)
         
         // CVPixelBufferから書き込むのでAdaptorを作成
-        let adaptor = AVAssetWriterInputPixelBufferAdaptor(assetWriterInput: input,
+        let adaptor = AVAssetWriterInputPixelBufferAdaptor(assetWriterInput: videoInput,
                                                            sourcePixelBufferAttributes: configuration.sourcePixelBufferAttributes)
         
         // videoに書き込むためのバッファを作成
@@ -58,15 +75,23 @@ struct VideoCreator {
                             ] as CFDictionary,
                             &pixelBuffer)
         CIContext().render(ciImage, to: pixelBuffer!)
-        
+
         // 書き込み可能かどうかの確認
         guard writer.startWriting() else { return nil }
         writer.startSession(atSourceTime: CMTime(seconds: 0, preferredTimescale: CMTimeScale(configuration.fps)))
 
+        reader.startReading()
+        while reader.status == .reading {
+            guard let buffer = trackOutput.copyNextSampleBuffer() else  { continue }
+            if audioInput.isReadyForMoreMediaData {
+                audioInput.append(buffer)
+            }
+        }
+
         adaptor.append(pixelBuffer!, withPresentationTime: CMTime(seconds: 0, preferredTimescale: CMTimeScale(configuration.fps)))
         adaptor.append(pixelBuffer!, withPresentationTime: configuration.duration)
-
-        input.markAsFinished()
+        
+        videoInput.markAsFinished()
         writer.endSession(atSourceTime: configuration.duration)
         writer.finishWriting {
             print("ビデオ完成")
